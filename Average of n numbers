@@ -1,0 +1,19 @@
+3 start
+one:1 already_added:0 num_of_elements:8 
+e1:20 e2:6 e3:90 e4:1 
+e5:5 e6:8 e7:1 e8:2 e9:3 
+e10:1
+result:0
+dupli_re:0
+average:0
+start:1 address:e1 result result
+1 address one address
+1 already_added one already_added
+4 already_added num_of_elements avg
+3 start
+avg:7 result dupli_re
+return:5 dupli_re num_of_elements halt
+1 average one average
+2 dupli_re num_of_elements dupli_re
+3 return
+halt:9
