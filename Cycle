@@ -1,0 +1,20 @@
+3 7 seq_location:55 seq_length:3 cycle_location:66 cycle_length:5
+7 cycle_location c_loc
+7 cycle_length c_len
+check1:5 zero c_len true1
+halt:9
+true1:5 zero s_len true2
+7 seq_length s_len
+7 seq_location s_loc
+3 true1
+true2:7 s_loc:0 c_loc:0
+1 s_loc one s_loc
+1 c_loc one c_loc
+2 s_len one s_len
+2 c_len one c_len
+3 check1
+s_len:0
+c_len:0
+zero:0
+one:1
+2 4 6
