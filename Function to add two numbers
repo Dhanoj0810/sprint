@@ -1,0 +1,20 @@
+3 start num_1:5 num_2:7 f_result:0 F_return:start_2  
+start:0 num_1 addend
+3 func_sum
+
+0 0 0 0 0 0
+
+x:34 56 0 halt
+start_2:0 x addend 3 func_sum 
+halt:9 
+
+0 0 0 0 0 0 0
+
+func_sum:1 addend one augand
+1 augand one result
+1 result one temp_address
+7 temp_address:0 return
+1 addend:0 augand:0 result:0 
+3 return:0
+
+one:1
