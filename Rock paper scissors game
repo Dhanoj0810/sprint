@@ -1,0 +1,41 @@
+6 round
+loop:4 round zero Check_who_is_the_winner
+6 player1
+6 player2
+4 player1 zero true1
+4 player1 two true2
+4 player1 five true3
+4 player2 zero inc_player2
+4 player2 two inc_player2
+4 player2 five inc_player2
+Decrement_round:2 round one round
+3 loop
+inc_player2:1 point_player2 one point_player2
+3 Decrement_round
+inc_player1:1 point_player1 one point_player1
+3 Decrement_round
+true3:4 player2 zero inc_player1
+4 player2 two inc_player2
+3 Decrement_round
+true2:4 player2 zero inc_player2
+4 player2 five inc_player1
+3 Decrement_round
+true1:4 player2 two inc_player1
+4 player2 five inc_player2
+3 Decrement_round
+Check_who_is_the_winner:4 point_player1 point_player2 halt
+5 point_player1 point_player2 winner_2
+7 one winner
+halt:9
+winner_2:7 two winner
+3 halt
+zero:0
+one:1
+two:2
+five:5
+round:0
+player1:0
+player2:0
+point_player1:0
+point_player2:0
+winner:0
