@@ -1,0 +1,17 @@
+3 5 8 1
+5 3 two stop
+5 3 c stop
+7 c dc
+7 4 dre
+4 dc one 33
+1 4 dre 4
+2 dc one dc
+3 19
+1 c one c
+3 9
+stop:9
+c:2
+one:1
+two:2
+dc:0
+dre:0
