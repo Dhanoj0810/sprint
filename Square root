@@ -1,0 +1,19 @@
+3 5 n:225 re:0
+4 zero n stop
+5 zero mul1 29
+5 n mulre 39
+1 mul2 one mul2
+7 mul2 mul1
+7 zero mulre
+3 9
+1 mul2 mulre mulre
+2 mul1 one mul1
+3 9
+2 mul2 one re
+3 stop
+zero:0
+one:1
+mul1:1
+mul2:1
+mulre:0
+stop:9
