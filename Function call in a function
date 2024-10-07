@@ -1,0 +1,50 @@
+3 start
+number_1:4
+number_2:5
+result:0
+start:0 halt push_number_address
+0 next1 func_push_return
+3 func_push
+
+next1:0 number_1 a
+3 func_sum
+halt:9
+
+func_push:7 top top_address
+0 push_number_address:0 top_address:0
+1 top one top
+3 func_push_return:0
+
+func_pop:2 top one top_addr
+7 top_addr:0 top_value:0
+2 top one top
+3 func_pop_return:0
+
+
+func_sum:1 a one b
+1 b one sum_result
+3 j
+number_3:7 number_4:5 sub_result:0
+j:0 sub_need_to_return push_number_address
+0 j2 func_push_return
+3 func_push
+j2:0 number_3 x
+3 func_sub
+sub_need_to_return:1 a:0 b:0 sum_result:0 
+0 sum_return top_value
+0 pop_re1 func_pop_return
+3 func_pop
+pop_re1:3 sum_return:0
+
+func_sub:1 x one y
+1 y one sub_res
+2 x:0 y:0 sub_res:0
+0 sub_return top_value
+0 pop_re2 func_pop_return
+3 func_pop
+pop_re2:3 sub_return:0
+
+
+top:stack
+one:1
+stack:0
