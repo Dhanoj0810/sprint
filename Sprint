@@ -1,0 +1,136 @@
+3 start f_po:a
+error:0
+ins:0
+zero:0
+one:1
+two:2
+three:3
+four:4
+five:5
+six:6
+seven:7
+nine:9
+ten:10
+
+start:7 f_po pointer
+
+loop:7 pointer:0 ins
+4 ins zero command_0
+4 ins one command_1
+4 ins two command_2
+4 ins three command_3
+4 ins four command_4
+4 ins five command_5
+4 ins six command_6
+4 ins seven command_7
+4 ins ten command_10
+4 ins nine halt
+1 error one error
+halt:9
+
+command_0:1 pointer one com_0_temp1
+7 com_0_temp1:0 com_0_data
+1 pointer two com_0_temp2
+2 com_0_temp2:0 one com_0_temp2
+1 f_po com_0_temp2 com_0_add
+0 com_0_data:0 com_0_add:0
+1 pointer three pointer
+3 loop
+
+command_1:1 pointer one com_1_temp1
+2 com_1_temp1:0 one com_1_temp1
+1 f_po com_1_temp1 com_1_add1
+1 pointer two com_1_temp2
+2 com_1_temp2:0 one com_1_temp2
+1 f_po com_1_temp2 com_1_add2
+1 pointer three com_1_temp3
+2 com_1_temp3:0 one com_1_temp3
+1 f_po com_1_temp3 com_1_add3
+1 com_1_add1:0 com_1_add2:0 com_1_add3:0
+1 pointer four pointer
+3 loop
+
+command_2:1 pointer one com_2_temp1
+2 com_2_temp1:0 one com_2_temp1
+1 f_po com_2_temp1 com_2_add1
+1 pointer two com_2_temp2
+2 com_2_temp2:0 one com_2_temp2
+1 f_po com_2_temp2 com_2_add2
+1 pointer three com_2_temp3
+2 com_2_temp3:0 one com_2_temp3
+1 f_po com_2_temp3 com_2_add3
+2 com_2_add1:0 com_2_add2:0 com_2_add3:0
+1 pointer four pointer
+3 loop
+
+command_3:1 pointer one com_3_temp
+2 com_3_temp:0 one com_3_temp
+1 f_po com_3_temp pointer
+3 loop
+
+command_4:1 pointer one com_4_temp1
+2 com_4_temp1:0 one com_4_temp1
+1 f_po com_4_temp1 com_4_add1
+1 pointer two com_4_temp2
+2 com_4_temp2:0 one com_4_temp2
+1 f_po com_4_temp2 com_4_add2
+4 com_4_add1:0 com_4_add2:0 com_4_true
+1 pointer four pointer
+3 loop
+com_4_true:1 pointer two pointer
+3 command_3
+
+
+command_5:1 pointer one com_5_temp1
+2 com_5_temp1:0 one com_5_temp1
+1 f_po com_5_temp1 com_5_add1
+1 pointer two com_5_temp2
+2 com_5_temp2:0 one com_5_temp2
+1 f_po com_5_temp2 com_5_add2
+5 com_5_add1:0 com_5_add2:0 com_5_true
+1 pointer four pointer
+3 loop
+com_5_true:1 pointer two pointer
+3 command_3
+
+command_6:1 pointer one com_6_temp1
+2 com_6_temp1:0 one com_6_temp1
+1 f_po com_6_temp1 com_6_add1
+6 com_6_add1:0
+1 pointer two pointer
+3 loop
+
+command_7:1 pointer one com_7_temp1
+2 com_7_temp1:0 one com_7_temp1
+1 f_po com_7_temp1 com_7_add1
+1 pointer two com_7_temp2
+2 com_7_temp2:0 one com_7_temp2
+1 f_po com_7_temp2 com_7_add2
+7 com_7_add1:0 com_7_add2:0
+1 pointer three pointer
+3 loop
+
+command_10:1 pointer one com_10_temp1
+2 com_10_temp1:0 one com_10_temp1
+1 f_po com_10_temp1 com_10_add1
+7 com_10_add1:0 mul1
+1 pointer two com_10_temp2
+2 com_10_temp2:0 one com_10_temp2
+1 f_po com_10_temp2 com_10_add2
+7 com_10_add2:0 mul2
+1 pointer three com_10_temp3
+2 com_10_temp3:0 one com_10_temp3
+1 f_po com_10_temp3 com_10_add3
+mul_check:4 zero mul1 true
+1 mul2 mul_result mul_result
+2 mul1 one mul1
+3 mul_check
+true:7 mul_result com_10_add3:0
+1 pointer four pointer
+3 loop
+mul1:0
+mul2:0
+mul_result:0
+
+
+a:3 3 10 1 2 8 9 10 9 0
