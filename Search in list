@@ -1,0 +1,13 @@
+3 7 first_element:36 length:5 target:2 result:0
+7 first_element position
+start:5 zero length check
+halt:9
+check:4 target position:0 set_result
+1 position one position
+2 length one length
+3 start
+set_result:7 one result
+3 halt
+zero:0
+one:1
+1 2 3 4 3
