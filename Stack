@@ -1,0 +1,23 @@
+0 stack stack_add 3 start12 num_1:5 num_2:7 f_return:halt f_sum_result:0 
+start12:0 num_1 push_add
+3 func_push
+halt:9
+
+func_sum:1
+
+func_push:1 push_add three push_count
+loop:7 push_add:0 stack_add:0
+1 push_add one push_add
+1 stack_add one stack_add
+5 push_add push_count loop
+1 push_add six push_return
+3 push_return:0
+
+
+one:1
+two:2
+three:3
+six:6
+push_count:0
+
+stack:0
